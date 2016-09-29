@@ -1,0 +1,97 @@
+tf-season-slider {
+    .season-slider {
+        display: block;
+        padding: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .season-labels {
+        position: relative;
+        height: 30px;
+        
+        .season-label {
+            position: absolute;
+        }
+    }
+
+    .timeline {
+        position: relative;
+        width: 100%;
+        height: 30px;
+
+        .seasons {
+            position: relative;
+            width: 100%;
+            height: 30px;
+
+            .season {
+                position: absolute;
+                right: 0;
+                top: 10px;
+                height: 10px;
+                display: inline-block;
+            }
+        }
+    }
+
+    .slider-btns {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        .slider-btn {
+            position: absolute;
+            border-radius: 50%;
+            border: none;
+            background: #00C;
+            width: 30px;
+            height: 30px;
+            margin-left: -15px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            color: #DDD;
+            text-align: center;
+            font-size: 10px;
+            vertical-align: center;
+
+            &:first-child {
+                left: 0;
+            }
+
+            &:last-child {
+                right: -15px;
+            }
+
+            &:disabled {
+                background: #004;
+                color: #999;
+            }
+
+            &:focus {
+                background: #00F;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+                outline: none;
+            }
+        }
+    }
+
+
+    .ruler {
+        width: 100%;
+
+        .ruler-section {
+            float: left;
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+
+            border-left: 1px solid black;
+
+            &:last-child {
+                border-right: 1px solid black;
+            }
+        }
+    }
+
+}

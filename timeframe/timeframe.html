@@ -1,0 +1,15 @@
+<!-- <input ng-init="slide = 100" ng-model="slide" />
+
+<div ng-click="lololol()">
+    <rzslider ng-init="ceil = 400" rz-slider-model="ceil" rz-slider-options="{floor: 0, ceil: 400, onlyBindHandles: true}"></rzslider>
+
+    <rzslider rz-slider-model="slide" rz-slider-options="{floor: 0, ceil: ceil, onlyBindHandles: true}" ng-click="lololol()"></rzslider>
+</div> -->
+
+<tf-season-slider seasons="tf.seasons" on-add="tf.addSeason(startDate)" on-move="tf.moveSeason(season)"></tf-season-slider>
+
+<tf-season-list seasons="tf.seasons" on-remove="tf.removeSeason(season)"></tf-season-list>
+
+
+<!--<button ng-click="tf.createSeason()">add</button>-->
+

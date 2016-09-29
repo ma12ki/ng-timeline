@@ -1,0 +1,43 @@
+<section class="season-slider">
+<!--     <div class="season-labels">
+        <div class="season-label"
+             ng-repeat="season in ss.seasons | orderBy: 'start' track by season.id"
+             ng-style="{left: ((ss.getDateToYearRatio(season.start) * 100) + '%')}">
+            {{season.start | amDateFormat: 'YYYY.MM.DD'}} - {{season.end | amDateFormat: 'YYYY.MM.DD'}}
+        </div>
+    </div> -->
+
+    <div class="timeline">
+        <div class="seasons" ng-click="$event.stopPropagation(); ss.addSeason($event)">
+            <div class="season"
+                 ng-repeat="season in ss.seasons | orderBy: 'start' track by season.id"
+                 ng-style="{left: ((ss.getDateToYearRatio(season.start) * 100) + '%'), background: ss.getSeasonColor($index)}"
+                 ng-attr-title="{{season.start | amDateFormat: 'YYYY.MM.DD'}} - {{season.end | amDateFormat: 'YYYY.MM.DD'}}">
+            </div>
+        </div>
+
+        <div class="slider-btns">
+            <button class="slider-btn" disabled>1</button>
+
+            <button class="slider-btn"
+                    ng-repeat="season in (seasons = (ss.seasons | orderBy: 'start')) track by season.id"
+                    ng-style="{left: ((ss.getDateToYearRatio(season.end) * 100) + '%')}"
+                    ng-show="!$last"
+                    ng-mousedown="ss.startAdjustingSeasonWithMouse(season, season.start, seasons[$index+1].end)"
+                    ng-keydown="$event.stopPropagation(); ss.handleKeyDown($event, season, season.start, seasons[$index+1].end)">
+                {{ss.getDayOfYear(season.end)}}
+            </button>
+
+            <button class="slider-btn" disabled ng-bind="ss.getDaysInYear()"></button>
+        </div>
+    </div>
+
+    <div class="ruler">
+        <div class="ruler-section">Jan - Mar</div>
+        <div class="ruler-section">Apr - Jun</div>
+        <div class="ruler-section">Jul - Sep</div>
+        <div class="ruler-section">Oct - Dec</div>
+    </div>
+
+    <!-- <pre>{{ss.seasons | json}}</pre> -->
+</section>

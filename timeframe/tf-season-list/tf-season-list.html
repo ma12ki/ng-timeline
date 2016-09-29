@@ -1,0 +1,8 @@
+<section>
+    <h3>Seasons</h3>
+    <div ng-repeat="season in sl.seasons | orderBy: 'start' track by season.id">
+        <input readonly ng-value="season.start | amDateFormat: 'YYYY.MM.DD'" />
+        <input readonly ng-value="season.end | amDateFormat: 'YYYY.MM.DD'" />
+        <button ng-click="sl.removeSeason(season)" ng-disabled="sl.seasons.length <= sl.MIN_SEASONS">remove</button>
+    </div>
+</section>
