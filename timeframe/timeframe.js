@@ -1,4 +1,4 @@
-angular.module('mzTimeline', ['angularMoment', 'rzModule']);
+angular.module('mzTimeline', ['angularMoment']);
 
 
 var timeframeComponent = {

@@ -12,9 +12,8 @@ var timeframeSeasonSliderComponent = {
 angular.module('mzTimeline').component('tfSeasonSlider', timeframeSeasonSliderComponent);
 
 /* @ngInject */
-function TimeframeSeasonSliderController($document, $interval) {
+function TimeframeSeasonSliderController($document) {
     this.$document = $document;
-    this.$interval = $interval;
 
     this.timeline = undefined;
 
@@ -30,7 +29,7 @@ TimeframeSeasonSliderController.prototype.$onDestroy = function() {
 };
 
 TimeframeSeasonSliderController.prototype.$postLink = function() {
-    this.timeline = $('tf-season-slider .timeline');
+    this.timeline = angular.element('tf-season-slider .timeline');
 };
 
 TimeframeSeasonSliderController.prototype.addSeason = function(event) {
