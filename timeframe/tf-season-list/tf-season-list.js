@@ -8,7 +8,7 @@ var timeframeSeasonListComponent = {
     }
 };
 
-angular.module('rmsv2').component('tfSeasonList', timeframeSeasonListComponent);
+angular.module('mzTimeline').component('tfSeasonList', timeframeSeasonListComponent);
 
 /* @ngInject */
 function TimeframeSeasonListController() {

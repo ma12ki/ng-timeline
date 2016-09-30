@@ -9,7 +9,7 @@ var timeframeSeasonSliderComponent = {
     }
 };
 
-angular.module('rmsv2').component('tfSeasonSlider', timeframeSeasonSliderComponent);
+angular.module('mzTimeline').component('tfSeasonSlider', timeframeSeasonSliderComponent);
 
 /* @ngInject */
 function TimeframeSeasonSliderController($document, $interval) {

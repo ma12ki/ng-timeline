@@ -1,4 +1,4 @@
-angular.module('rmsv2').service('timeframeService', TimeframeService);
+angular.module('mzTimeline').service('timeframeService', TimeframeService);
 
 var seasonId = 0;
 

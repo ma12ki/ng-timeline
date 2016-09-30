@@ -1,4 +1,4 @@
-angular.module('rmsv2', ['angularMoment', 'rzModule']);
+angular.module('mzTimeline', ['angularMoment', 'rzModule']);
 
 
 var timeframeComponent = {
@@ -7,7 +7,7 @@ var timeframeComponent = {
     controllerAs: 'tf'
 };
 
-angular.module('rmsv2').component('mzTimeframe', timeframeComponent);
+angular.module('mzTimeline').component('mzTimeframe', timeframeComponent);
 
 /* @ngInject */
 function TimeframeController(timeframeService) {
